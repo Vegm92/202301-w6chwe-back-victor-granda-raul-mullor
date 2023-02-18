@@ -4,7 +4,7 @@ export class CustomError extends Error {
   constructor(
     message: string,
     public statusCode: number,
-    public publucMessage: string
+    public publicMessage: string
   ) {
     super(message);
   }
