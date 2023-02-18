@@ -1,10 +1,14 @@
 {
-  "_id": {
-    "$oid": "63efd4e3dca11ca3935f9130"
-  },
-  "id": 1,
-  "name": "sacar al perro",
-  "speed": 10,
-  "endurance": 10,
-  "creationDate": "01/01/2000"
+  "robots": [
+    {
+      "_id": {
+        "$oid": "63efd4e3dca11ca3935f9130"
+      },
+      "id": 1,
+      "name": "sacar al perro",
+      "speed": 10,
+      "endurance": 10,
+      "creationDate": "01/01/2000"
+    }
+  ]
 }

@@ -8,7 +8,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 app.use("/robots", (req, res) => {
-  res.status(200).json({ hello: "Hello there!" });
+  res.status(200).json({});
 });
 
 export default app;
