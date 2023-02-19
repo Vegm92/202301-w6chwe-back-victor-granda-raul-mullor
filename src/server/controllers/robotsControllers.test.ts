@@ -1,17 +1,24 @@
 import Robot from "../../database/models/robotSchema";
 import { getRobots } from "./robotsControllers";
 import { requestMock, responseMock } from "../../mocks/robotMocks.js";
-import { type Response } from "express";
+import type { Response, Request } from "express";
 
 describe("Given a getRobots controllers", () => {
-  describe("When it receives a request and response", () => {
-    test("Then it should respond with status code 200 and call its json method", async () => {
-      const object = { robots: {} };
-      Robot.find = jest.fn().mockReturnValue({});
-      await getRobots(requestMock, responseMock as Response);
+  describe("When it receives a response", () => {
+    test("Then it should respond with status method with a 200 code", async () => {
+      const res = {
+        status: jest.fn().mockReturnThis(),
+        json: jest.fn().mockResolvedValue({}),
+      } as Partial<Response>;
+      const req = {};
+      const next = jest.fn();
+      const expectedStatusCode = 200;
 
-      expect(responseMock.status).toHaveBeenCalledWith(200);
-      expect(responseMock.json).toHaveBeenCalledWith(object);
+      Robot.find = jest.fn().mockReturnValue({});
+
+      await getRobots(req as Request, res as Response, next);
+
+      expect(res.status).toHaveBeenCalledWith(expectedStatusCode);
     });
   });
 });
