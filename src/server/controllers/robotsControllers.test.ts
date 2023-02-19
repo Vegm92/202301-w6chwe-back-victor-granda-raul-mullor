@@ -6,19 +6,27 @@ import type { Response, Request } from "express";
 describe("Given a getRobots controllers", () => {
   describe("When it receives a response", () => {
     test("Then it should respond with status method with a 200 code", async () => {
-      const res = {
-        status: jest.fn().mockReturnThis(),
-        json: jest.fn().mockResolvedValue({}),
-      } as Partial<Response>;
-      const req = {};
+      const req = {} as Request;
+      const res = { status: jest.fn() } as Partial<Response>;
       const next = jest.fn();
-      const expectedStatusCode = 200;
+      const statusCode = 200;
 
-      Robot.find = jest.fn().mockReturnValue({});
+      Robot.find = jest.fn().mockImplementationOnce(() => ({
+        exec: jest.fn().mockResolvedValue({
+          stats: {
+            speed: 5,
+            endurance: 5,
+            creationDate: "1980-10-2645:00:00.0000",
+          },
+          _id: "63efcf24773d3719e628a284",
+          name: "Patatetas",
+          image: "image.png",
+        }),
+      }));
 
-      await getRobots(req as Request, res as Response, next);
+      await getRobots(req, res as Response, next);
 
-      expect(res.status).toHaveBeenCalledWith(expectedStatusCode);
+      expect(res.status).toHaveBeenCalledWith(statusCode);
     });
   });
 });
