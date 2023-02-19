@@ -1,26 +1,26 @@
+import createDebug from "debug";
 import { type NextFunction, type Request, type Response } from "express";
-import { CustomError } from "../../CustomError/CustomError";
+import { CustomError } from "../../CustomError/CustomError.js";
+
+const debug = createDebug("robots:server");
 
 export const notFoundError = (
   req: Request,
   res: Response,
   next: NextFunction
 ) => {
-  const notFoundError = new CustomError(
-    "Path not found",
-    404,
-    "Endpoint not found"
-  );
+  const error = new CustomError("Path not found", 404, "Endpoint not found");
 
-  next(notFoundError);
+  next(error);
 };
 
 export const generalError = (
-  { statusCode, publicMessage }: CustomError,
+  error: CustomError,
   req: Request,
   res: Response
 ) => {
+  debug(error.message);
   res
-    .status(statusCode || 500)
-    .json({ error: publicMessage || "Endpoint not found" });
+    .status(error.statusCode || 500)
+    .json({ error: error.publicMessage || "Unable to load" });
 };
