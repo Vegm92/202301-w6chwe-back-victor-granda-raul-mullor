@@ -1,6 +1,6 @@
 import createDebug from "debug";
 import chalk from "chalk";
-import { app } from ".";
+import { app } from "./index.js";
 
 const debug = createDebug("robots:root");
 
