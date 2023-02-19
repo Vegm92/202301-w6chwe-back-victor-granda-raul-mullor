@@ -1,14 +1,16 @@
 import express from "express";
 import morgan from "morgan";
+import cors from "cors";
+import { generalError, notFoundError } from "./middlewares/errorMiddlewares";
+import { robotsRouter } from "./routers/robotsRouters";
 
-const app = express();
+export const app = express();
 
 app.use(morgan("dev"));
-
 app.use(express.json());
+app.use(cors());
 
-app.use("/robots", (req, res) => {
-  res.status(200).json({});
-});
+app.use("/robots", robotsRouter);
 
-export default app;
+app.use(notFoundError);
+app.use(generalError);
