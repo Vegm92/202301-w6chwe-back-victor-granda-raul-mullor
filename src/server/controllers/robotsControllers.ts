@@ -8,7 +8,7 @@ export const getRobots = async (
   next: NextFunction
 ) => {
   try {
-    const robots = await Robot.find({});
+    const robots = await Robot.find().exec();
     res.status(200).json({ robots });
   } catch (error) {
     const customError = new CustomError(

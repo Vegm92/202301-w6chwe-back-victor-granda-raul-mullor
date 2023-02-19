@@ -1,14 +1,49 @@
 {
   "robots": [
     {
-      "_id": {
-        "$oid": "63efd4e3dca11ca3935f9130"
+      "name": "Raul",
+      "image": "url",
+      "stats": {
+        "speed": 3,
+        "endurance": 3
       },
-      "id": 1,
-      "name": "sacar al perro",
-      "speed": 10,
-      "endurance": 10,
-      "creationDate": "01/01/2000"
+      "creationDate": "10/12/2020"
+    },
+    {
+      "name": "Raul",
+      "image": "url",
+      "stats": {
+        "speed": 3,
+        "endurance": 3
+      },
+      "creationDate": "10/12/2020"
+    },
+    {
+      "name": "Raul",
+      "image": "url",
+      "stats": {
+        "speed": 3,
+        "endurance": 3
+      },
+      "creationDate": "10/12/2020"
+    },
+    {
+      "name": "Raul",
+      "image": "url",
+      "stats": {
+        "speed": 3,
+        "endurance": 3
+      },
+      "creationDate": "10/12/2020"
+    },
+    {
+      "name": "Raul",
+      "image": "url",
+      "stats": {
+        "speed": 3,
+        "endurance": 3
+      },
+      "creationDate": "10/12/2020"
     }
   ]
 }
