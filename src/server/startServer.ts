@@ -1,12 +1,12 @@
-import debug from "debug";
-import app from "./index.js";
+import createDebug from "debug";
 import chalk from "chalk";
+import { app } from ".";
 
-const createDebug = debug("robots-server");
+const debug = createDebug("robots:root");
 
 const startServer = async (port: number) =>
   new Promise((resolve) => {
-    createDebug(chalk.red("Im alive!"));
+    debug(chalk.red("Im alive!"));
     const server = app.listen(port);
     resolve(server);
   });
