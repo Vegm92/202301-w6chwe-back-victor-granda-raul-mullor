@@ -1,9 +1,11 @@
-export interface userStructure {
+import { type JwtPayload } from "jsonwebtoken";
+
+export interface UserStructure {
   username: string;
   password: string;
   email?: string;
 }
-export interface robotStructure {
+export interface RobotStructure {
   name: string;
   image: string;
   speed: number;
@@ -12,5 +14,13 @@ export interface robotStructure {
   chip: string;
 }
 
-export type usersStructure = userStructure[];
-export type robotsStructure = robotStructure[];
+export interface CustomRequest extends Request {
+  ownerId: string;
+}
+
+export interface CustomJwtPayload extends JwtPayload {
+  sub: string;
+}
+
+export type usersStructure = UserStructure[];
+export type robotsStructure = RobotStructure[];
