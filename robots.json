@@ -1,13 +1,13 @@
 {
   "robots": [
     {
-      "name": "Raul",
-      "image": "url",
+      "name": "N-18",
+      "image": "https://static.wikia.nocookie.net/dragonball/images/5/5a/Android_18_DBZ_Ep_148_001.jpg/revision/latest/scale-to-width-down/626?cb=20220228054757",
       "stats": {
-        "speed": 3,
-        "endurance": 3
+        "speed": 8,
+        "endurance": 9
       },
-      "creationDate": "10/12/2020"
+      "creationDate": "01/05/2180"
     },
     {
       "name": "Raul",
