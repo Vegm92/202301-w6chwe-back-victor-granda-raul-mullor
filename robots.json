@@ -1,49 +1,32 @@
-{
-  "robots": [
-    {
-      "name": "N-18",
-      "image": "https://static.wikia.nocookie.net/dragonball/images/5/5a/Android_18_DBZ_Ep_148_001.jpg/revision/latest/scale-to-width-down/626?cb=20220228054757",
-      "stats": {
-        "speed": 8,
-        "endurance": 9
-      },
-      "creationDate": "01/05/2180"
+[
+  {
+    "_id": {
+      "$oid": "63efd4e3dca11ca3935f9130"
     },
-    {
-      "name": "Raul",
-      "image": "url",
-      "stats": {
-        "speed": 3,
-        "endurance": 3
-      },
-      "creationDate": "10/12/2020"
+    "id": 1,
+    "name": "r2d2",
+    "speed": 10,
+    "endurance": 10,
+    "creationDate": "01/01/2000"
+  },
+  {
+    "_id": {
+      "$oid": "63f3aab40b86c436007e6d1b"
     },
-    {
-      "name": "Raul",
-      "image": "url",
-      "stats": {
-        "speed": 3,
-        "endurance": 3
-      },
-      "creationDate": "10/12/2020"
+    "id": 2,
+    "name": "c3po",
+    "speed": 10,
+    "endurance": 10,
+    "creationDate": "01/01/2000"
+  },
+  {
+    "_id": {
+      "$oid": "63f3aab40b86c436007e6d1c"
     },
-    {
-      "name": "Raul",
-      "image": "url",
-      "stats": {
-        "speed": 3,
-        "endurance": 3
-      },
-      "creationDate": "10/12/2020"
-    },
-    {
-      "name": "Raul",
-      "image": "url",
-      "stats": {
-        "speed": 3,
-        "endurance": 3
-      },
-      "creationDate": "10/12/2020"
-    }
-  ]
-}
+    "id": 3,
+    "name": "astroBot",
+    "speed": 10,
+    "endurance": 10,
+    "creationDate": "01/01/2000"
+  }
+]

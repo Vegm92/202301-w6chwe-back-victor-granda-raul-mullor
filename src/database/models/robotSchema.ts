@@ -6,6 +6,7 @@ const robotSchema = new mongoose.Schema({
   speed: Number,
   endurance: Number,
   creationDate: Date,
+  chip: { type: String, required: true, unique: true },
 });
 
 const Robot = mongoose.model("Robot", robotSchema);

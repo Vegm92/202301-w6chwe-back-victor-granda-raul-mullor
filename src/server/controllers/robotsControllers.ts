@@ -12,8 +12,7 @@ export const getRobots = async (
     res.status(200).json({ robots });
   } catch (error) {
     const customError = new CustomError(
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-      error.message,
+      "Ha petat",
       500,
       "Couldn't retrieve robots"
     );
